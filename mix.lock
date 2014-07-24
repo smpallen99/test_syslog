@@ -1,0 +1,2 @@
+%{"exprintf": {:package, "0.1.4"},
+  "syslog": {:git, "git://github.com/smpallen99/syslog.git", "238722c8227e922dfe531c5478e761ede52a18cf", []}}

@@ -14,6 +14,8 @@ use Mix.Config
 #       level: :info,
 #       format: "$time $metadata[$level] $message\n"
 
+config :logger, :syslog, [level: :debug, facility: :local1, appid: "exlag"]
+
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.

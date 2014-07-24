@@ -6,9 +6,12 @@ defmodule TestSyslog do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
+    # Add the syslog backend 
+    Logger.add_backend Logger.Backends.Syslog
+
     children = [
       # Define workers and child supervisors to be supervised
-      # worker(TestSyslog.Worker, [arg1, arg2, arg3])
+      worker(TestSyslog.Worker, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

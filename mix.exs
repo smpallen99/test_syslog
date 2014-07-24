@@ -12,7 +12,7 @@ defmodule TestSyslog.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :syslog],
      mod: {TestSyslog, []}]
   end
 
@@ -26,6 +26,8 @@ defmodule TestSyslog.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [
+      {:syslog, github: "smpallen99/syslog"}
+    ]
   end
 end
